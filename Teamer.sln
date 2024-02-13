@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamer.DATA", "Teamer.DATA\Teamer.DATA.csproj", "{530C3314-05B4-4776-92FF-1CE5C603E688}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teamer.DATA", "Teamer.DATA\Teamer.DATA.csproj", "{530C3314-05B4-4776-92FF-1CE5C603E688}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamer.BL", "Teamer.BL\Teamer.BL.csproj", "{3C87B9A8-C675-452A-BE80-4CA67A5F4138}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teamer.BL", "Teamer.BL\Teamer.BL.csproj", "{3C87B9A8-C675-452A-BE80-4CA67A5F4138}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamer.APP.Android", "Teamer.APP\Teamer.APP.Android\Teamer.APP.Android.csproj", "{F02C496F-31D7-40BC-9E39-6DDB14755DA5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamer.APP.iOS", "Teamer.APP\Teamer.APP.iOS\Teamer.APP.iOS.csproj", "{47726A84-53BD-4FC8-9C75-16FD76EB23BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamer.APP", "Teamer.APP\Teamer.APP\Teamer.APP.csproj", "{AB202289-B211-46F7-8FA1-09CB88152DDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teamer.APP", "Teamer.APP\Teamer.APP\Teamer.APP.csproj", "{AB202289-B211-46F7-8FA1-09CB88152DDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{B677135C-9D7E-4A4F-B96D-3ABF38684096}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,18 @@ Global
 		{AB202289-B211-46F7-8FA1-09CB88152DDB}.Release|iPhone.Build.0 = Release|Any CPU
 		{AB202289-B211-46F7-8FA1-09CB88152DDB}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{AB202289-B211-46F7-8FA1-09CB88152DDB}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Release|iPhone.Build.0 = Release|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{B677135C-9D7E-4A4F-B96D-3ABF38684096}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
