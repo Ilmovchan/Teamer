@@ -15,6 +15,10 @@ namespace Teamer.DATA.Models
         public int UserId { get; set; }
         public User User { get; set; }
 
+        [ForeignKey("Team")]
+        public int TeamId { get; set; }
+        public Team Team { get; set; }
+
         public string Title { get; set; }
         public string? Description { get; set; }
         public string? Extra { get; set; }
@@ -46,6 +50,11 @@ namespace Teamer.DATA.Models
             Extra = extra;
             DeadLine = deadLine;
             IconUrl = iconUrl;
+        }
+
+        public override string ToString()
+        {
+            return Title;
         }
 
         /// <summary>

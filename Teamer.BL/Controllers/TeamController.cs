@@ -12,7 +12,7 @@ namespace Teamer.BL.Controllers
     public class TeamController
     {
         private readonly DbContext _context;
-        public List<Team> Teams { get; set; }
+        public List<Team> Teams { get; private set; }
 
         public TeamController(DbContext context) 
         {
@@ -21,9 +21,9 @@ namespace Teamer.BL.Controllers
             Teams = _context.Set<Team>().ToList();
         }
 
-        public void CreateTeam(string name, string? description, string? iconUrl)
+        public void CreateTeam(User admin ,string name, string? description, string? iconUrl)
         {
-            var team = new Team(name, description, iconUrl);
+            var team = new Team(admin, name, description, iconUrl);
             Teams.Add(team);
             _context.Add(team);
             _context.SaveChanges();

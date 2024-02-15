@@ -18,9 +18,6 @@ namespace Teamer.DATA.Models
 
         [InverseProperty("User")]
         public List<TeamUser> TeamUsers { get; set; } = new List<TeamUser>();
-
-        [NotMapped]
-        public Dictionary<Team, List<Task>> TeamTasks { get; set; }
         #endregion
 
         public User(string name)

@@ -10,6 +10,11 @@ namespace Teamer.DATA.Models
         #region Properties
         [Key]
         public int Id { get; set; }
+
+        [ForeignKey("User")]
+        public int AdminId { get; set; }
+
+
         public string Name { get; set; }
         public string? Description { get; set; }
         public string? IconUrl { get; set; }
@@ -18,8 +23,9 @@ namespace Teamer.DATA.Models
         public List<TeamUser> TeamUsers { get; set; } = new List<TeamUser>();
         #endregion
 
-        public Team(string name, string? descrtiption, string? iconUrl)
+        public Team(User admin, string name, string? descrtiption, string? iconUrl)
         {
+            AdminId = admin.Id;
             Name = name ?? throw new ArgumentNullException(nameof(name));
             Description = descrtiption;
             IconUrl = iconUrl;

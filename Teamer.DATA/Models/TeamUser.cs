@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Teamer.DATA.Models
@@ -14,6 +15,8 @@ namespace Teamer.DATA.Models
         public int UserId { get; set; }
         [ForeignKey("UserId")]
         public User User { get; set; }
+
+        public List<Task> Tasks { get; set; } = new List<Task>();
 
         public override string ToString()
         {
