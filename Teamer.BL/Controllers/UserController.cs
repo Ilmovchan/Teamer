@@ -11,12 +11,15 @@ namespace Teamer.BL.Controllers
         public User CurrentUser { get; private set; }
         public List<User> Users { get; private set; }
 
-        public UserController(string name, DbContext context)
+        public UserController(DbContext context)
         {
             _context = context;
 
             Users = _context.Set<User>().ToList();
+        }
 
+        public void SetCurrentUser(string name) 
+        {
             CurrentUser = Users.SingleOrDefault(u => u.Name == name);
 
             if (CurrentUser == null)

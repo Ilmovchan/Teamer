@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Teamer.DATA.Migrations;
+using System;
+using System.IO;
 using Teamer.DATA.Models;
 
 namespace Teamer.DATA.Repository
@@ -15,7 +16,9 @@ namespace Teamer.DATA.Repository
 
         public DataContext()
         {
-            DbPath = "TeamerDb";
+            DbPath = Path.Combine (
+        Environment.GetFolderPath (Environment.SpecialFolder.Personal),
+        "Teamer");
             Database.EnsureCreated();
         }
 

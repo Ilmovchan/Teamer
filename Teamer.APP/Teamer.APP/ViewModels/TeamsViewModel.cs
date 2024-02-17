@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace Teamer.APP.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class TeamsViewModel : BaseViewModel
     {
         private Item _selectedItem;
 
@@ -17,9 +17,9 @@ namespace Teamer.APP.ViewModels
         public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
-        public ItemsViewModel()
+        public TeamsViewModel()
         {
-            Title = "Browse";
+            Title = "Teams";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Teamer.APP.Views;
+﻿using Teamer.APP.Views;
+using Teamer.BL.Controllers;
+using Teamer.DATA.Repository;
 using Xamarin.Forms;
 
 namespace Teamer.APP.ViewModels
@@ -10,6 +9,16 @@ namespace Teamer.APP.ViewModels
     {
         public Command LoginCommand { get; }
 
+        private string _loginName;
+        public string LoginName 
+        {
+            get { return _loginName; }  
+            set { 
+                _loginName = value;
+                OnPropertyChanged(nameof(LoginName));
+            }
+        }
+
         public LoginViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
@@ -17,8 +26,8 @@ namespace Teamer.APP.ViewModels
 
         private async void OnLoginClicked(object obj)
         {
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+            App.UserController.SetCurrentUser(LoginName);
+            await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
         }
     }
 }

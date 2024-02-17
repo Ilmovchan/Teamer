@@ -12,15 +12,15 @@ using Xamarin.Forms.Xaml;
 
 namespace Teamer.APP.Views
 {
-    public partial class ItemsPage : ContentPage
+    public partial class TeamsPage : ContentPage
     {
-        ItemsViewModel _viewModel;
+        TeamsViewModel _viewModel;
 
-        public ItemsPage()
+        public TeamsPage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            BindingContext = _viewModel = new TeamsViewModel();
         }
 
         protected override void OnAppearing()

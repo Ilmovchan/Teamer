@@ -1,13 +1,15 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.ComponentModel;
+using Teamer.BL.Controllers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Teamer.APP.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class MainPage : ContentPage
     {
-        public AboutPage()
+        public MainPage()
         {
             InitializeComponent();
         }
