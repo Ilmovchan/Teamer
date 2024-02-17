@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Teamer.APP.Views.ProfilePage">
+
+
+
+
+
+
+
+
+
+
+    <ContentPage.Content>
+        <StackLayout Margin="15,0" Spacing="8">
+            <StackLayout>
+                <Label Text="$UserName" FontSize="Medium" TextColor="#1f1e1d" />
+                <Label Text="Tap to change name" FontSize="Small" />
+            </StackLayout>
+            <BoxView Color="DarkGray" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,7,0,10"/>
+            <StackLayout>
+                <Label Text="$Email" FontSize="Medium" TextColor="#1f1e1d" />
+                <Label Text="Tap to change email" FontSize="Small" />
+            </StackLayout>
+            <BoxView Color="DarkGray" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,7,0,10"/>
+            <StackLayout>
+                <Label Text="$Phone" FontSize="Medium" TextColor="#1f1e1d" />
+                <Label Text="Tap to change phone number" FontSize="Small" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
