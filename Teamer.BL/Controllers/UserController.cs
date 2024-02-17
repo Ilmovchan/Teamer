@@ -38,6 +38,7 @@ namespace Teamer.BL.Controllers
 
         public void EditUser(string? email, string? phone, string? iconUrl)
         {
+            
             CurrentUser.Email = email;
             CurrentUser.Phone = phone;
             CurrentUser.IconUrl = iconUrl;

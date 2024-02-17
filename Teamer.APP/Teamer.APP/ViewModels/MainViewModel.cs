@@ -9,8 +9,6 @@ namespace Teamer.APP.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private string _userName;
-
         public string UserName
         {
             get { return App.UserController.CurrentUser.Name; }

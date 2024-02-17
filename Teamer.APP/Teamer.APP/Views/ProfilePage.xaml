@@ -15,19 +15,25 @@
     <ContentPage.Content>
         <StackLayout Margin="15,0" Spacing="8">
             <StackLayout>
-                <Label Text="$UserName" FontSize="Medium" TextColor="#1f1e1d" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnUserEditTapped}" />
+                </StackLayout.GestureRecognizers>
+                <Image Source="default_profile_icon.png" HeightRequest="250" />
+                <Label Text="{Binding UserName}" FontSize="Medium" TextColor="#1f1e1d" />
                 <Label Text="Tap to change name" FontSize="Small" />
             </StackLayout>
             <BoxView Color="DarkGray" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,7,0,10"/>
             <StackLayout>
-                <Label Text="$Email" FontSize="Medium" TextColor="#1f1e1d" />
+                <Label Text="{Binding Email}" FontSize="Medium" TextColor="#1f1e1d" />
                 <Label Text="Tap to change email" FontSize="Small" />
             </StackLayout>
             <BoxView Color="DarkGray" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,7,0,10"/>
             <StackLayout>
-                <Label Text="$Phone" FontSize="Medium" TextColor="#1f1e1d" />
+                <Label Text="{Binding Phone}" FontSize="Medium" TextColor="#1f1e1d" />
                 <Label Text="Tap to change phone number" FontSize="Small" />
             </StackLayout>
         </StackLayout>
+        
+
     </ContentPage.Content>
 </ContentPage>
