@@ -36,11 +36,18 @@ namespace Teamer.BL.Controllers
             _context.SaveChanges();
         }
 
-        public void EditUser(string? email, string? phone, string? iconUrl)
+        public void EditUser(string name, string? email, string? phone)
         {
-            
+            CurrentUser.Name = name;
             CurrentUser.Email = email;
             CurrentUser.Phone = phone;
+
+            _context.Update(CurrentUser);
+            _context.SaveChanges();
+        }
+
+        public void EditUserIcon(string iconUrl)
+        {
             CurrentUser.IconUrl = iconUrl;
 
             _context.Update(CurrentUser);

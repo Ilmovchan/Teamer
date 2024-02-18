@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamer.APP.Android", "Teame
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamer.APP.iOS", "Teamer.APP\Teamer.APP.iOS\Teamer.APP.iOS.csproj", "{AC9DDD97-0739-4B14-A829-4E968729D107}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamer.APP", "Teamer.APP\Teamer.APP\Teamer.APP.csproj", "{319C32F0-3ACC-4FFF-A8D3-BF4CFF130950}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teamer.APP", "Teamer.APP\Teamer.APP\Teamer.APP.csproj", "{319C32F0-3ACC-4FFF-A8D3-BF4CFF130950}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

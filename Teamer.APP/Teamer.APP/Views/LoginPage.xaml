@@ -6,6 +6,8 @@
              mc:Ignorable="d"
              x:Class="Teamer.APP.Views.LoginPage"
              Shell.NavBarIsVisible="False">
+    
+    
     <ContentPage.Content>
         <Grid Padding="20,0,20,0" VerticalOptions="Center">
             <Entry Text="{Binding LoginName}" x:Name="LoginEntry" Placeholder="Name:" PlaceholderColor="Gray" Grid.Row="2"/>

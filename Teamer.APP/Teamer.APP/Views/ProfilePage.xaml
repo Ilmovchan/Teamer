@@ -1,39 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Teamer.APP.Views.ProfilePage">
-
-
-
-
-
-
-
-
-
+             x:Class="Teamer.APP.Views.ProfilePage"
+             Title="{Binding Title}">
 
     <ContentPage.Content>
         <StackLayout Margin="15,0" Spacing="8">
-            <StackLayout>
+            <AbsoluteLayout>
+                <Image Source="{Binding UserIconUrl}" 
+                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                        AbsoluteLayout.LayoutFlags="All" HeightRequest="250"
+                        />
+
+                <ImageButton Source="plus.png" 
+                         Aspect="AspectFit" 
+                         Command="{Binding ChangeProfileIconCommand}"
+                         AbsoluteLayout.LayoutBounds="0.95, 1.1, 60, 60" 
+                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                         BackgroundColor="{StaticResource Primary}"
+                         CornerRadius="30">
+                </ImageButton>
+            </AbsoluteLayout>
+
+            <StackLayout Margin="0,30,0,0">
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OnUserEditTapped}" />
+                    <TapGestureRecognizer Command="{Binding UserNameEditTappedCommand}" />
                 </StackLayout.GestureRecognizers>
-                <Image Source="default_profile_icon.png" HeightRequest="250" />
                 <Label Text="{Binding UserName}" FontSize="Medium" TextColor="#1f1e1d" />
                 <Label Text="Tap to change name" FontSize="Small" />
             </StackLayout>
             <BoxView Color="DarkGray" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,7,0,10"/>
             <StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding EmailEditTappedCommand}" />
+                </StackLayout.GestureRecognizers>
                 <Label Text="{Binding Email}" FontSize="Medium" TextColor="#1f1e1d" />
                 <Label Text="Tap to change email" FontSize="Small" />
             </StackLayout>
             <BoxView Color="DarkGray" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,7,0,10"/>
             <StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding PhoneEditTappedCommand}" />
+                </StackLayout.GestureRecognizers>
                 <Label Text="{Binding Phone}" FontSize="Medium" TextColor="#1f1e1d" />
                 <Label Text="Tap to change phone number" FontSize="Small" />
             </StackLayout>
-        </StackLayout>
-        
 
+            <ImageButton Source="check.png" Padding="10"
+             Aspect="AspectFit" Command="{Binding AcceptButtonCommand}"
+             x:Name="AcceptButton" HorizontalOptions="End"
+             IsVisible="{Binding IsAcceptButtonVisible}"
+             HeightRequest="60" WidthRequest="60"
+             Margin="0,120,0,0" BackgroundColor="{StaticResource Primary}"
+             CornerRadius="30">
+            </ImageButton>
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
